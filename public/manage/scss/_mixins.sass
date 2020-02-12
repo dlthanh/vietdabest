@@ -1,0 +1,40 @@
+// Border radius
+@mixin border-radius($r: 4)
+    border-radius: $r * 1px
+
+@mixin border-top-radius($r: 4)
+    border-top-left-radius: $r * 1px
+    border-top-right-radius: $r * 1px
+
+@mixin border-bottom-radius($r: 4)
+    border-bottom-left-radius: $r * 1px
+    border-bottom-right-radius: $r * 1px
+
+@mixin border-left-radius($r: 4)
+    border-top-left-radius: $r * 1px
+    border-bottom-left-radius: $r * 1px
+
+@mixin border-right-radius($r: 4)
+    border-top-right-radius: $r * 1px
+    border-bottom-right-radius: $r * 1px
+
+// Flex box
+@mixin flex()
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@mixin flex-center()
+    display: flex
+    justify-content: center
+    align-items: center
+
+// Button Hover
+@mixin btn-hover($bg-color, $text-color: $white, $text-hover-color: $white)
+    background-color: $bg-color
+    color: $text-color
+    font-weight: 500
+    &:hover
+        background-color: darken($bg-color, 5%)
+        @if $text-hover-color != $white
+            color: $text-hover-color

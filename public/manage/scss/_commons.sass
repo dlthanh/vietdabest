@@ -1,0 +1,62 @@
+*, *::before, *::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html, body
+    line-height: 1.3
+    color: $black
+
+html, body, input, textarea
+    font-family: 'Geomanist', sans-serif
+    font-size: $font-default
+
+img, video
+    vertical-align: middle
+
+// Button
+.btn
+    height: $input-height
+    padding: 0 15px
+    border: none
+    +border-radius()
+    cursor: pointer
+    +btn-hover($success-color)
+
+// Form
+.form-group
+    margin-bottom: 10px
+    .control-label
+        font-weight: 500
+        display: block
+        margin-bottom: 5px
+    .form-control
+        height: $input-height
+        +border-radius()
+        border: solid 1px $input-border-color
+        padding: 4px 10px
+        width: 100%
+        &:focus
+            outline: none
+
+.form-check
+    .form-control
+        display: none
+        & + .control-label
+            cursor: pointer
+            color: $checkbox-unchecked-color
+            &:before
+                content: '\f0c8'
+                font-family: 'Font Awesome 5 Pro'
+                display: inline-block
+                min-width: 20px
+        &:checked + .control-label
+            color: $black
+            &:before
+                content: '\f14a'
+                font-weight: 700
+                color: $success-color
+
+.form-inline
+    +flex
+    min-height: $input-height
