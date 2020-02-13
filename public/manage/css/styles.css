@@ -1,0 +1,218 @@
+@charset "UTF-8";
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html, body {
+  line-height: 1.3;
+  color: #000000; }
+
+html, body, input, textarea {
+  font-family: "Geomanist", sans-serif;
+  font-size: 14px; }
+
+img, video {
+  vertical-align: middle; }
+
+.btn {
+  display: inline-block;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #54a963;
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none; }
+  .btn:hover {
+    background-color: #4c9859; }
+
+.alert {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px; }
+  .alert-error {
+    background-color: #fae3e5;
+    border: solid 1px #f3b7bd;
+    color: #dc3545; }
+
+.form-group {
+  margin-bottom: 10px; }
+  .form-group .control-label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px; }
+  .form-group .form-control {
+    height: 30px;
+    border-radius: 4px;
+    border: solid 1px #d8d8d8;
+    padding: 4px 10px;
+    width: 100%; }
+    .form-group .form-control:focus {
+      outline: none;
+      border-color: #8c8c8c; }
+
+.form-check .form-control {
+  display: none; }
+  .form-check .form-control + .control-label {
+    cursor: pointer;
+    color: #999; }
+    .form-check .form-control + .control-label:before {
+      content: "";
+      font-family: "Font Awesome 5 Pro";
+      display: inline-block;
+      min-width: 20px; }
+  .form-check .form-control:checked + .control-label {
+    color: #000000; }
+    .form-check .form-control:checked + .control-label:before {
+      content: "";
+      font-weight: 700;
+      color: #54a963; }
+
+.form-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 30px; }
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border: solid 1px #d9d9d9; }
+  .table thead tr {
+    background-color: #e6e6e6; }
+    .table thead tr th {
+      padding: 11px 10px;
+      font-weight: 500;
+      text-align: left; }
+  .table tbody tr td {
+    padding: 11px 10px;
+    border-bottom: solid 1px #d9d9d9; }
+
+.action i {
+  width: 18px;
+  margin-right: 5px; }
+
+.manager-left {
+  width: 70%; }
+
+.cpanel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.nav {
+  width: 250px;
+  max-width: 250px;
+  height: 100vh;
+  border-right: solid 1px rgba(0, 0, 0, 0.14);
+  position: relative; }
+  .nav-brand {
+    display: block;
+    text-align: center;
+    padding: 5px 0 4px;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.14); }
+    .nav-brand img {
+      height: 40px; }
+  .nav-list {
+    padding-top: 15px; }
+  .nav-item a {
+    display: block;
+    padding: 11px 10px;
+    text-decoration: none;
+    color: #000000; }
+    .nav-item a i {
+      width: 18px;
+      margin-right: 5px;
+      text-align: center; }
+  .nav-item.active, .nav-item:hover {
+    background-color: #e6e6e6; }
+    .nav-item.active a, .nav-item:hover a {
+      font-weight: 500; }
+      .nav-item.active a i, .nav-item:hover a i {
+        font-weight: 700; }
+
+.wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.header {
+  height: 50px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.14); }
+  .header-menu {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 15px; }
+    .header-menu__username {
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      padding: 6px 15px;
+      border-radius: 4px; }
+      .header-menu__username:after {
+        content: "";
+        font-family: "Font Awesome 5 Pro";
+        display: inline-block;
+        margin-left: 10px; }
+      .header-menu__username:hover {
+        background-color: #e6e6e6; }
+        .header-menu__username:hover:after {
+          content: ""; }
+  .header-submenu {
+    width: 200px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    border: solid 1px rgba(0, 0, 0, 0.14);
+    border-radius: 4px;
+    display: none;
+    background-color: #ffffff; }
+    .header-submenu a {
+      display: block;
+      padding: 11px 15px;
+      text-decoration: none;
+      color: #000000; }
+      .header-submenu a i {
+        width: 18px;
+        margin-right: 5px;
+        text-align: center; }
+      .header-submenu a:hover {
+        background-color: #e6e6e6; }
+    .header-menu__username:hover .header-submenu {
+      display: block; }
+
+.main {
+  padding: 15px 30px;
+  height: calc(100vh - 50px); }
+  .main-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 15px; }
+  .main-title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 500; }

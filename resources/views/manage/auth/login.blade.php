@@ -13,17 +13,15 @@
 <body>
     <div class="login">
         <div class="login-wrapper">
-            <h1 class="login-title">Đăng nhập</h1>
+            {{-- <h1 class="login-title">Đăng nhập</h1> --}}
 
             @error('email')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
+                <div class="alert alert-error">Thông tin đăng nhập không chính xác</div>
             @enderror
 
             @error('password')
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
+                    <div class="alert alert-error">Thông tin đăng nhập không chính xác</div>
                 </span>
             @enderror
 

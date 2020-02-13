@@ -10,6 +10,9 @@ return [
             'users' => 'c,r,u,d',
             'profile' => 'r,u'
         ],
+        'editor' => [
+            'profile' => 'r,u'
+        ]
     ],
     'permission_structure' => [],
     'permissions_map' => [

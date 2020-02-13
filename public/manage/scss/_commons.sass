@@ -16,12 +16,22 @@ img, video
 
 // Button
 .btn
-    height: $input-height
-    padding: 0 15px
+    display: inline-block
+    // height: $input-height
+    padding: 6px 15px
     border: none
     +border-radius()
     cursor: pointer
     +btn-hover($success-color)
+    text-decoration: none
+    
+// Alert
+.alert
+    padding: 10px
+    +border-radius()
+    margin-bottom: 10px
+    &-error
+        +alert($danger-color)
 
 // Form
 .form-group
@@ -38,6 +48,7 @@ img, video
         width: 100%
         &:focus
             outline: none
+            border-color: darken($input-border-color, 30%)
 
 .form-check
     .form-control
@@ -60,3 +71,27 @@ img, video
 .form-inline
     +flex
     min-height: $input-height
+
+// Table
+.table
+    border-collapse: collapse
+    width: 100%
+    border: solid 1px darken($white, 15%)
+    thead
+        tr
+            background-color: darken($white, 10%)
+            th
+                padding: 11px 10px
+                font-weight: 500
+                text-align: left
+    tbody
+        tr
+            td
+                padding: 11px 10px
+                border-bottom: solid 1px darken($white, 15%)
+
+// Action button
+.action
+    i
+        width: 18px
+        margin-right: 5px

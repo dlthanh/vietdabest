@@ -2,7 +2,8 @@
 *, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 html, body {
   line-height: 1.3;
@@ -16,16 +17,26 @@ img, video {
   vertical-align: middle; }
 
 .btn {
-  height: 30px;
-  padding: 0 15px;
+  display: inline-block;
+  padding: 6px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   background-color: #54a963;
   color: #ffffff;
-  font-weight: 500; }
+  font-weight: 500;
+  text-decoration: none; }
   .btn:hover {
     background-color: #4c9859; }
+
+.alert {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px; }
+  .alert-error {
+    background-color: #fae3e5;
+    border: solid 1px #f3b7bd;
+    color: #dc3545; }
 
 .form-group {
   margin-bottom: 10px; }
@@ -40,7 +51,8 @@ img, video {
     padding: 4px 10px;
     width: 100%; }
     .form-group .form-control:focus {
-      outline: none; }
+      outline: none;
+      border-color: #8c8c8c; }
 
 .form-check .form-control {
   display: none; }
@@ -60,23 +72,35 @@ img, video {
       color: #54a963; }
 
 .form-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 30px; }
 
 .login {
   height: 100vh;
   max-height: 100vh;
   background-color: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .login-wrapper {
     max-width: 400px;
     background-color: #ffffff;
     border-radius: 4px;
     padding: 15px;
-    flex: 1; }
-
-/*# sourceMappingURL=login.css.map */
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }

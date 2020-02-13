@@ -38,3 +38,9 @@
         background-color: darken($bg-color, 5%)
         @if $text-hover-color != $white
             color: $text-hover-color
+
+// Alert
+@mixin alert($bg-color)
+    background-color: lighten($bg-color, 40%)
+    border: solid 1px lighten($bg-color, 30%)
+    color: $bg-color
