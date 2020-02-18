@@ -32,6 +32,8 @@ img, video
     margin-bottom: 10px
     &-error
         +alert($danger-color)
+    &-success
+        +alert($success-color)
 
 // Form
 .form-group
@@ -71,6 +73,11 @@ img, video
 .form-inline
     +flex
     min-height: $input-height
+    > *
+        flex: 1
+        margin-right: 30px
+        &:last-child
+            margin-right: 0
 
 // Table
 .table

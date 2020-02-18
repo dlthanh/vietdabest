@@ -10,5 +10,6 @@ Route::group(['middleware' => 'auth:manager'], function() {
     Route::group(['prefix' => 'managers', 'middleware' => ['role:superadministrator|administrator']], function() {
         Route::get('/', 'ManagerController@index')->name('cpanel.manager.index');
         Route::get('/create', 'ManagerController@showCreateForm')->name('cpanel.manager.showCreateForm');
+        Route::post('/store', 'ManagerController@store')->name('cpanel.manager.store');
     });
 });
