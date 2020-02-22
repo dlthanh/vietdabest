@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
     /**
@@ -21,8 +21,27 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function getLocale(Request $request)
     {
-        return view('home');
+        $locale = session('locale');
+        if(!isset($locale)) {
+            $locale = \Config::get('app.locale');
+        }
+        switch ($locale) {
+            case 'vi':
+                $locale = 'vi-VN';
+                break;
+            case 'en':
+                $locale = 'en-US';
+                break;
+            default:
+                $locale = 'vi-VN';
+        }
+        return redirect()->route('home', $locale);
+    }
+
+    public function index(Request $request, $locale)
+    {
+        return view('client.home.index');
     }
 }

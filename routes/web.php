@@ -11,10 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'HomeController@getLocale');
+
+Route::group(['prefix' => '{lang?}', 'where' => ['lang' => 'vi-VN|en-US'], 'middleware' => 'locale'], function() {
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/change-language', 'HomeController@changeLanguage')->name('change-language');
+    Route::get('/show-locate', 'HomeController@showLocate');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
